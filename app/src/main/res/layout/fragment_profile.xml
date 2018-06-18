@@ -33,33 +33,37 @@
                 style="@style/Profile.EditText"
                 android:layout_marginTop="32dp"
                 android:drawableStart="@drawable/ic_person_black_24dp"
+                android:editable="false"
                 android:hint="@string/msg_name"
-                android:inputType="textCapWords" />
+                android:inputType="none" />
 
             <EditText
                 android:id="@+id/text_username"
                 style="@style/Profile.EditText"
                 android:layout_marginTop="16dp"
                 android:drawableStart="@drawable/ic_at_black_24dp"
+                android:editable="false"
                 android:hint="@string/msg_username"
-                android:inputType="text" />
+                android:inputType="none" />
 
             <EditText
                 android:id="@+id/text_email"
                 style="@style/Profile.EditText"
                 android:layout_marginTop="16dp"
                 android:drawableStart="@drawable/ic_email_black_24dp"
+                android:editable="false"
                 android:hint="@string/msg_email"
-                android:inputType="textEmailAddress" />
+                android:inputType="none" />
 
             <EditText
                 android:id="@+id/text_avatar_url"
                 style="@style/Profile.EditText"
+                android:layout_marginBottom="16dp"
                 android:layout_marginTop="16dp"
                 android:drawableStart="@drawable/ic_link_black_24dp"
                 android:hint="@string/msg_avatar_url"
                 android:inputType="text"
-                android:layout_marginBottom="16dp"/>
+                android:visibility="gone" />
         </LinearLayout>
 
     </ScrollView>

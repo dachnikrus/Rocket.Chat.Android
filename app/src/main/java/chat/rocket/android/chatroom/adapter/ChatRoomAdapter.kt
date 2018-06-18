@@ -216,9 +216,9 @@ class ChatRoomAdapter(
                     R.id.action_message_copy -> {
                         presenter?.copyMessage(id)
                     }
-                    R.id.action_message_edit -> {
+                   /** R.id.action_message_edit -> {
                         presenter?.editMessage(roomId, id, message.message)
-                    }
+                    } */
                     R.id.action_message_star -> {
                         if (!item.isChecked) {
                             presenter?.starMessage(id)
@@ -233,7 +233,7 @@ class ChatRoomAdapter(
                             presenter?.unpinMessage(id)
                         }
                     }
-                    R.id.action_message_delete -> presenter?.deleteMessage(roomId, id)
+                    /* R.id.action_message_delete -> presenter?.deleteMessage(roomId, id)*/
                     R.id.action_menu_msg_react -> presenter?.showReactions(id)
                     else -> TODO("Not implemented")
                 }

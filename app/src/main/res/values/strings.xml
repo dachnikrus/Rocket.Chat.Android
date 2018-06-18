@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name" translatable="false">Rocket.Chat</string>
+    <string name="app_name" translatable="false">RChat</string>
 
     <!-- Titles -->
-    <string name="title_sign_in_your_server">Sign in to your server</string>
+    <string name="title_sign_in_your_server">Start chatting with your broker</string>
     <string name="title_log_in">Log in</string>
     <string name="title_register_username">Register username</string>
     <string name="title_reset_password">Reset password</string>
@@ -10,7 +10,7 @@
     <string name="title_authentication">Authentication</string>
     <string name="title_legal_terms">Legal Terms</string>
     <string name="title_chats">Chats</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_profile">Profile info</string>
     <string name="title_members">Members (%d)</string>
     <string name="title_settings">Settings</string>
     <string name="title_password">Change Password</string>
@@ -48,7 +48,7 @@
     <string name="msg_no_data_to_display">No data to display</string>
     <string name="msg_profile_update_successfully">Profile update successfully</string>
     <string name="msg_username">username</string>
-    <string name="msg_username_or_email">username or email</string>
+    <string name="msg_username_or_email">Email</string>
     <string name="msg_password">password</string>
     <string name="msg_name">name</string>
     <string name="msg_email">email</string>
