@@ -3,19 +3,19 @@ package chat.rocket.android.files.ui
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import chat.rocket.android.R
 import chat.rocket.android.chatroom.ui.ChatRoomActivity
 import chat.rocket.android.files.adapter.FilesAdapter
 import chat.rocket.android.files.presentation.FilesPresenter
 import chat.rocket.android.files.presentation.FilesView
-import chat.rocket.android.files.viewmodel.FileViewModel
+import chat.rocket.android.files.uimodel.FileUiModel
 import chat.rocket.android.helper.EndlessRecyclerViewScrollListener
 import chat.rocket.android.helper.ImageHelper
 import chat.rocket.android.player.PlayerActivity
@@ -41,9 +41,8 @@ class FilesFragment : Fragment(), FilesView {
     @Inject
     lateinit var presenter: FilesPresenter
     private val adapter: FilesAdapter =
-        FilesAdapter { fileViewModel -> presenter.openFile(fileViewModel) }
-    private val linearLayoutManager =
-        LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        FilesAdapter { fileUiModel -> presenter.openFile(fileUiModel) }
+    private val linearLayoutManager = LinearLayoutManager(context)
     private lateinit var chatRoomId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,7 +69,7 @@ class FilesFragment : Fragment(), FilesView {
         presenter.loadFiles(chatRoomId)
     }
 
-    override fun showFiles(dataSet: List<FileViewModel>, total: Long) {
+    override fun showFiles(dataSet: List<FileUiModel>, total: Long) {
         setupToolbar(total)
         if (adapter.itemCount == 0) {
             adapter.prependData(dataSet)
@@ -80,7 +79,7 @@ class FilesFragment : Fragment(), FilesView {
                     override fun onLoadMore(
                         page: Int,
                         totalItemsCount: Int,
-                        recyclerView: RecyclerView?
+                        recyclerView: RecyclerView
                     ) {
                         presenter.loadFiles(chatRoomId)
                     }
