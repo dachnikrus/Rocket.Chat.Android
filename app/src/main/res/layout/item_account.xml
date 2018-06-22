@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
     android:paddingEnd="16dp"
     android:paddingStart="16dp"
     android:paddingTop="16dp"
-    android:background="?selectableItemBackground">
+    android:visibility="gone">
 
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/server_logo"

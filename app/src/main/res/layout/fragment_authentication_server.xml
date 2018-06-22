@@ -25,7 +25,8 @@
         android:hint="@string/default_server"
         android:imeOptions="actionDone"
         android:inputType="text|textUri"
-        android:paddingEnd="0dp" />
+        android:paddingEnd="0dp"
+        android:visibility="gone" />
 
     <FrameLayout
         android:id="@+id/protocol_container"
@@ -35,12 +36,14 @@
         android:layout_marginStart="@dimen/screen_edge_left_and_right_margins"
         android:layout_below="@id/text_headline"
         android:layout_marginTop="32dp">
+
         <Spinner
             android:id="@+id/text_server_protocol"
-            android:spinnerMode="dropdown"
             android:layout_width="120dp"
             android:layout_height="50dp"
-            android:backgroundTint="@color/actionMenuColor" />
+            android:backgroundTint="@color/actionMenuColor"
+            android:spinnerMode="dropdown"
+            android:visibility="gone" />
     </FrameLayout>
 
     <com.wang.avi.AVLoadingIndicatorView
