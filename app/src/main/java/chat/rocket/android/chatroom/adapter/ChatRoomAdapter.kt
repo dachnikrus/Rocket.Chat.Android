@@ -237,7 +237,7 @@ class ChatRoomAdapter(
                         }
                     }
 
-                    R.id.action_message_delete -> {
+                    /**R.id.action_message_delete -> {
                         context?.let {
                             val builder = AlertDialog.Builder(it)
                             builder.setTitle(it.getString(R.string.msg_delete_message))
@@ -246,7 +246,7 @@ class ChatRoomAdapter(
                                     .setNegativeButton(it.getString(R.string.msg_cancel)) { _, _ ->  }
                                     .show()
                         }
-                    }
+                    }*/
 
                     R.id.action_menu_msg_react -> presenter?.showReactions(id)
                     else -> TODO("Not implemented")
