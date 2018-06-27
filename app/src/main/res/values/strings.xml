@@ -2,7 +2,7 @@
     <string name="app_name" translatable="false">RChat</string>
 
     <!-- Titles -->
-    <string name="title_sign_in_your_server">Start chatting with your broker</string>
+    <string name="title_sign_in_your_server">Start chatting with</string>
     <string name="title_log_in">Log in</string>
     <string name="title_register_username">Register username</string>
     <string name="title_reset_password">Reset password</string>

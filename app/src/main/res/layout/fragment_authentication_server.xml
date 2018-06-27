@@ -8,11 +8,34 @@
     android:focusableInTouchMode="true"
     tools:context=".authentication.server.ui.ServerFragment">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:alpha="0.4"
+        android:scaleType = "centerCrop"
+        android:src="@drawable/background_app" />
+
     <TextView
         android:id="@+id/text_headline"
         style="@style/Authentication.Headline.TextView"
         android:layout_centerHorizontal="true"
         android:text="@string/title_sign_in_your_server" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="344dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/button_connect"
+        android:layout_below="@+id/text_headline"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="426dp"
+        android:src="@drawable/rc_logo_dark_bg" />
 
     <EditText
         android:id="@+id/text_server_url"
@@ -25,17 +48,16 @@
         android:hint="@string/default_server"
         android:imeOptions="actionDone"
         android:inputType="text|textUri"
-        android:paddingEnd="0dp"
         android:visibility="gone" />
 
     <FrameLayout
         android:id="@+id/protocol_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/style_edit_text_authentication"
-        android:layout_marginStart="@dimen/screen_edge_left_and_right_margins"
         android:layout_below="@id/text_headline"
-        android:layout_marginTop="32dp">
+        android:layout_marginStart="@dimen/screen_edge_left_and_right_margins"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/style_edit_text_authentication">
 
         <Spinner
             android:id="@+id/text_server_protocol"
