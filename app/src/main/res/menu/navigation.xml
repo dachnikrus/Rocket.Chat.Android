@@ -14,7 +14,8 @@
         <item
             android:id="@+id/action_channel"
             android:icon="@drawable/ic_create_black_24dp"
-            android:title="@string/action_create_channel" />
+            android:title="@string/action_create_channel"
+            android:visible="false" />
     </group>
 
     <group
